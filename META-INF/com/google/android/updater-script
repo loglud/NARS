@@ -1,0 +1,7 @@
+ui_print("Installing Google Apps..");
+run_program("/sbin/busybox", "mount", "/system");
+show_progress(1, 15);
+delete("/system/app/CarHomeLauncher.apk", "/system/app/GenieWidget.apk",  "/system/app/Gmail.apk",  "/system/app/GoogleBackupTransport.apk",  "/system/app/GoogleCalendarSyncAdapter.apk",  "/system/app/GoogleContactsSyncAdapter.apk",  "/system/app/GoogleFeedback.apk",  "/system/app/GooglePartnerSetup.apk",  "/system/app/GoogleQuickSearchBox.apk",  "/system/app/QuickSearchBox.apk",  "/system/app/GoogleServicesFramework.apk",  "/system/app/googlevoice.apk",  "/system/app/kickback.apk",  "/system/app/LatinImeTutorial.apk",  "/system/app/Maps.apk",  "/system/app/MarketUpdater.apk",  "/system/app/MediaUploader.apk",  "/system/app/NetworkLocation.apk",  "/system/app/OneTimeInitializer.apk",  "/system/app/SetupWizard.apk",  "/system/app/Provision.apk",  "/system/app/soundback.apk",  "/system/app/Street.apk",  "/system/app/Talk.apk",  "/system/app/talkback.apk",  "/system/app/Vending.apk",  "/system/app/VoiceSearch.apk",  "/system/app/YouTube.apk", "/system/etc/permissions/com.google.android.maps.xml",  "/system/etc/permissions/features.xml",  "/system/framework/com.google.android.maps.jar",  "/system/lib/libmicrobes_jni.so",  "/system/lib/libvoicesearch.so");
+package_extract_dir("system", "/system");
+run_program("/sbin/busybox", "umount", "/system");
+ui_print("Installation complete!");
